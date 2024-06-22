@@ -1,0 +1,7 @@
+1|ProductX|Bellaire|5
+2|ProductY|Sugarland|5
+3|ProductZ|Houston|5
+10|Computerization|Stafford|4
+20|Reorganization|Houston|1
+30|Newbenefits|Stafford|4
+10|ProductXYZ|Houston|6

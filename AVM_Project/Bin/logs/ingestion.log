@@ -1,0 +1,30 @@
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.3, Platform: Windows-11-10.0.22631-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:root:Connected to Snowflake successfully.
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:root:Table DEPENDENT created successfully.
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:root:Ingested 9 rows into table DEPENDENT.
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:root:Table DEPARTMENT created successfully.
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:root:Ingested 4 rows into table DEPARTMENT.
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:root:Table EMPLOYEE created successfully.
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:root:Ingested 10 rows into table EMPLOYEE.
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:root:Table PROJECT created successfully.
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:root:Ingested 7 rows into table PROJECT.
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:root:Table DEPT_LOCATIONS created successfully.
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:root:Ingested 6 rows into table DEPT_LOCATIONS.
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:root:Table WORKS_ON created successfully.
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:root:Ingested 21 rows into table WORKS_ON.
+INFO:snowflake.connector.connection:closed
+INFO:snowflake.connector.connection:No async queries seem to be running, deleting session
+INFO:root:Snowflake connection closed.

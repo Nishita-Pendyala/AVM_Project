@@ -1,0 +1,12 @@
+ESSN|PNAME|EMP_DEPT_NAME|PROJ_DEPT_NAME
+333445555|Computerization|Research|Administration
+333445555|ProductXYZ|Research|Sales
+333445555|Reorganization|Research|Headquarters
+999887777|ProductXYZ|Administration|Sales
+987987987|ProductXYZ|Administration|Sales
+987654321|Reorganization|Administration|Headquarters
+753453457|Reorganization|Sales|Headquarters
+753453457|Newbenefits|Sales|Administration
+753453457|Computerization|Sales|Administration
+117987987|Newbenefits|Sales|Administration
+117987987|Newbenefits|Sales|Administration

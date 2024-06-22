@@ -1,0 +1,638 @@
+2024-06-21 20:00:05,817 - DEBUG - Starting the script
+2024-06-21 20:00:05,817 - DEBUG - Attempting to connect to Snowflake
+2024-06-21 20:00:05,817 - INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.3, Platform: Windows-11-10.0.22631-SP0
+2024-06-21 20:00:05,817 - DEBUG - connect
+2024-06-21 20:00:05,817 - DEBUG - __config
+2024-06-21 20:00:05,817 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-06-21 20:00:05,817 - DEBUG - use_numpy: False
+2024-06-21 20:00:05,817 - DEBUG - initialized
+2024-06-21 20:00:05,817 - DEBUG - REST API object was created: mcvpuud-yr28894.snowflakecomputing.com:443
+2024-06-21 20:00:05,817 - DEBUG - authenticate
+2024-06-21 20:00:05,817 - DEBUG - assertion content: *********
+2024-06-21 20:00:05,817 - DEBUG - account=mcvpuud-yr28894, user=NISHITA27, database=P01_EMP, schema=EMP_RAW, warehouse=COMPUTE_WH, role=None, request_id=ee8e8756-aaf9-4606-8746-c3becbe534ec
+2024-06-21 20:00:05,817 - DEBUG - body['data']: {'CLIENT_APP_ID': 'PythonConnector', 'CLIENT_APP_VERSION': '3.10.1', 'SVN_REVISION': None, 'ACCOUNT_NAME': 'mcvpuud-yr28894', 'LOGIN_NAME': 'NISHITA27', 'CLIENT_ENVIRONMENT': {'APPLICATION': 'PythonConnector', 'OS': 'Windows', 'OS_VERSION': 'Windows-11-10.0.22631-SP0', 'PYTHON_VERSION': '3.12.3', 'PYTHON_RUNTIME': 'CPython', 'PYTHON_COMPILER': 'MSC v.1938 64 bit (AMD64)', 'OCSP_MODE': 'FAIL_OPEN', 'TRACING': 10, 'LOGIN_TIMEOUT': None, 'NETWORK_TIMEOUT': None, 'SOCKET_TIMEOUT': None}, 'SESSION_PARAMETERS': {'CLIENT_PREFETCH_THREADS': 4}}
+2024-06-21 20:00:05,817 - DEBUG - Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-06-21 20:00:05,817 - DEBUG - Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-06-21 20:00:05,817 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:05,817 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:05,817 - DEBUG - Request guid: 9f2481cc-a65e-4a5c-bc8b-21ba67284c3a
+2024-06-21 20:00:05,817 - DEBUG - socket timeout: 60
+2024-06-21 20:00:05,831 - DEBUG - Starting new HTTPS connection (1): mcvpuud-yr28894.snowflakecomputing.com:443
+2024-06-21 20:00:06,776 - DEBUG - OCSP Mode: FAIL_OPEN, OCSP response cache file name: None
+2024-06-21 20:00:07,358 - DEBUG - cache directory: C:\Users\Nishita Pendyala\AppData\Local\Snowflake\Caches
+2024-06-21 20:00:07,358 - DEBUG - ocsp_response_cache_uri: file://C:/Users/Nishita Pendyala/AppData/Local/Snowflake/Caches/ocsp_response_cache.json
+2024-06-21 20:00:07,358 - DEBUG - OCSP_VALIDATION_CACHE size: 306
+2024-06-21 20:00:07,358 - DEBUG - OCSP response cache server is enabled: http://ocsp.snowflakecomputing.com/ocsp_response_cache.json
+2024-06-21 20:00:07,358 - DEBUG - OCSP dynamic cache server RETRY URL: None
+2024-06-21 20:00:07,358 - DEBUG - validating certificate: mcvpuud-yr28894.snowflakecomputing.com
+2024-06-21 20:00:07,358 - DEBUG - # of certificates: 4
+2024-06-21 20:00:07,374 - DEBUG - subject: OrderedDict({'common_name': '*.us-east-2.snowflakecomputing.com'}), issuer: OrderedDict({'country_name': 'US', 'organization_name': 'Amazon', 'common_name': 'Amazon RSA 2048 M02'})
+2024-06-21 20:00:07,374 - DEBUG - subject: OrderedDict({'country_name': 'US', 'organization_name': 'Amazon', 'common_name': 'Amazon RSA 2048 M02'}), issuer: OrderedDict({'country_name': 'US', 'organization_name': 'Amazon', 'common_name': 'Amazon Root CA 1'})
+2024-06-21 20:00:07,374 - DEBUG - subject: OrderedDict({'country_name': 'US', 'organization_name': 'Amazon', 'common_name': 'Amazon Root CA 1'}), issuer: OrderedDict({'country_name': 'US', 'state_or_province_name': 'Arizona', 'locality_name': 'Scottsdale', 'organization_name': 'Starfield Technologies, Inc.', 'common_name': 'Starfield Services Root Certificate Authority - G2'})
+2024-06-21 20:00:07,374 - DEBUG - subject: OrderedDict({'country_name': 'US', 'state_or_province_name': 'Arizona', 'locality_name': 'Scottsdale', 'organization_name': 'Starfield Technologies, Inc.', 'common_name': 'Starfield Services Root Certificate Authority - G2'}), issuer: OrderedDict({'country_name': 'US', 'organization_name': 'Starfield Technologies, Inc.', 'organizational_unit_name': 'Starfield Class 2 Certification Authority'})
+2024-06-21 20:00:07,374 - DEBUG - reading certificate bundle: C:\Users\Nishita Pendyala\AppData\Local\Programs\Python\Python312\Lib\site-packages\certifi\cacert.pem
+2024-06-21 20:00:07,405 - DEBUG - not found issuer_der: OrderedDict({'country_name': 'US', 'organization_name': 'Starfield Technologies, Inc.', 'organizational_unit_name': 'Starfield Class 2 Certification Authority'})
+2024-06-21 20:00:07,405 - DEBUG - hit cache for subject: OrderedDict({'common_name': '*.us-east-2.snowflakecomputing.com'})
+2024-06-21 20:00:07,405 - DEBUG - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-12-10 00:00:00+00:00
+2024-06-21 20:00:07,405 - DEBUG - hit cache for subject: OrderedDict({'country_name': 'US', 'organization_name': 'Amazon', 'common_name': 'Amazon RSA 2048 M02'})
+2024-06-21 20:00:07,405 - DEBUG - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-12-10 00:00:00+00:00
+2024-06-21 20:00:07,405 - DEBUG - hit cache for subject: OrderedDict({'country_name': 'US', 'organization_name': 'Amazon', 'common_name': 'Amazon Root CA 1'})
+2024-06-21 20:00:07,405 - DEBUG - Verifying the attached certificate is signed by the issuer. Valid Not After: 2025-05-07 12:00:00+00:00
+2024-06-21 20:00:07,405 - DEBUG - hit cache for subject: OrderedDict({'country_name': 'US', 'state_or_province_name': 'Arizona', 'locality_name': 'Scottsdale', 'organization_name': 'Starfield Technologies, Inc.', 'common_name': 'Starfield Services Root Certificate Authority - G2'})
+2024-06-21 20:00:07,421 - DEBUG - ok
+2024-06-21 20:00:08,065 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /session/v1/login-request?request_id=ee8e8756-aaf9-4606-8746-c3becbe534ec&databaseName=P01_EMP&schemaName=EMP_RAW&warehouse=COMPUTE_WH&request_guid=9f2481cc-a65e-4a5c-bc8b-21ba67284c3a HTTP/1.1" 200 1572
+2024-06-21 20:00:08,065 - DEBUG - SUCCESS
+2024-06-21 20:00:08,065 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:08,065 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:08,065 - DEBUG - completed authentication
+2024-06-21 20:00:08,065 - DEBUG - token = ******
+2024-06-21 20:00:08,065 - DEBUG - master_token = ******
+2024-06-21 20:00:08,065 - DEBUG - id_token = NULL
+2024-06-21 20:00:08,080 - DEBUG - mfa_token = NULL
+2024-06-21 20:00:08,080 - INFO - Connected to Snowflake successfully.
+2024-06-21 20:00:08,080 - DEBUG - Starting data processing
+2024-06-21 20:00:08,080 - DEBUG - Executing query: CREATE SCHEMA IF NOT EXISTS EMP_PROC
+2024-06-21 20:00:08,080 - DEBUG - cursor
+2024-06-21 20:00:08,080 - DEBUG - executing SQL/command
+2024-06-21 20:00:08,080 - DEBUG - query: [CREATE SCHEMA IF NOT EXISTS EMP_PROC]
+2024-06-21 20:00:08,080 - DEBUG - binding: [CREATE SCHEMA IF NOT EXISTS EMP_PROC] with input=[None], processed=[{}]
+2024-06-21 20:00:08,080 - DEBUG - sequence counter: 1
+2024-06-21 20:00:08,080 - DEBUG - Request id: 7da031ac-11f9-450a-a1ec-e774d3b9d284
+2024-06-21 20:00:08,080 - DEBUG - running query [CREATE SCHEMA IF NOT EXISTS EMP_PROC]
+2024-06-21 20:00:08,080 - DEBUG - is_file_transfer: True
+2024-06-21 20:00:08,080 - DEBUG - _cmd_query
+2024-06-21 20:00:08,080 - DEBUG - serialize_to_dict() called
+2024-06-21 20:00:08,080 - DEBUG - sql=[CREATE SCHEMA IF NOT EXISTS EMP_PROC], sequence_id=[1], is_file_transfer=[False]
+2024-06-21 20:00:08,080 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:08,080 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:08,080 - DEBUG - Request guid: af454105-8f1d-4be4-9445-fa3c9ffb1a36
+2024-06-21 20:00:08,080 - DEBUG - socket timeout: 60
+2024-06-21 20:00:08,174 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=7da031ac-11f9-450a-a1ec-e774d3b9d284&request_guid=af454105-8f1d-4be4-9445-fa3c9ffb1a36 HTTP/1.1" 200 1221
+2024-06-21 20:00:08,174 - DEBUG - SUCCESS
+2024-06-21 20:00:08,174 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:08,174 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:08,174 - DEBUG - Query id: 01b52b3c-0001-e6c6-0000-00060cf280bd
+2024-06-21 20:00:08,174 - DEBUG - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1719018008081624, 'priority': 0}]}
+2024-06-21 20:00:08,174 - DEBUG - deserialize {'id': 0, 'timestamp': 1719018008081624, 'priority': 0}
+2024-06-21 20:00:08,174 - DEBUG - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-06-21 20:00:08,174 - DEBUG - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:08,174 - DEBUG - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:08,174 - DEBUG - deserialize_json_dict() returns
+2024-06-21 20:00:08,174 - DEBUG - Cache Entry: (0, 1719018008081624, 0)
+2024-06-21 20:00:08,174 - DEBUG - sfqid: 01b52b3c-0001-e6c6-0000-00060cf280bd
+2024-06-21 20:00:08,174 - DEBUG - query execution done
+2024-06-21 20:00:08,174 - DEBUG - SUCCESS
+2024-06-21 20:00:08,174 - DEBUG - PUT OR GET: False
+2024-06-21 20:00:08,174 - DEBUG - Query result format: json
+2024-06-21 20:00:08,174 - DEBUG - parsing for result batch id: 1
+2024-06-21 20:00:08,174 - INFO - Number of results in first chunk: 1
+2024-06-21 20:00:08,174 - INFO - Executed query: CREATE SCHEMA IF NOT EXISTS EMP_PROC
+2024-06-21 20:00:08,174 - DEBUG - cursor
+2024-06-21 20:00:08,174 - DEBUG - executing SQL/command
+2024-06-21 20:00:08,174 - DEBUG - query: [USE SCHEMA EMP_PROC]
+2024-06-21 20:00:08,174 - DEBUG - binding: [USE SCHEMA EMP_PROC] with input=[None], processed=[{}]
+2024-06-21 20:00:08,174 - DEBUG - sequence counter: 2
+2024-06-21 20:00:08,174 - DEBUG - Request id: 4a36b494-8811-451c-ad45-cbd8cb875a4f
+2024-06-21 20:00:08,174 - DEBUG - running query [USE SCHEMA EMP_PROC]
+2024-06-21 20:00:08,174 - DEBUG - is_file_transfer: True
+2024-06-21 20:00:08,174 - DEBUG - _cmd_query
+2024-06-21 20:00:08,174 - DEBUG - serialize_to_dict() called
+2024-06-21 20:00:08,174 - DEBUG - Cache Entry: (0, 1719018008081624, 0)
+2024-06-21 20:00:08,174 - DEBUG - serialize_to_dict(): data to send to server {'entries': [{'id': 0, 'timestamp': 1719018008081624, 'priority': 0, 'context': {}}]}
+2024-06-21 20:00:08,174 - DEBUG - sql=[USE SCHEMA EMP_PROC], sequence_id=[2], is_file_transfer=[False]
+2024-06-21 20:00:08,174 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:08,174 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:08,174 - DEBUG - Request guid: 0697d201-883f-4ae9-8a2f-d8986f0cf647
+2024-06-21 20:00:08,174 - DEBUG - socket timeout: 60
+2024-06-21 20:00:08,473 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=4a36b494-8811-451c-ad45-cbd8cb875a4f&request_guid=0697d201-883f-4ae9-8a2f-d8986f0cf647 HTTP/1.1" 200 1208
+2024-06-21 20:00:08,489 - DEBUG - SUCCESS
+2024-06-21 20:00:08,489 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:08,489 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:08,489 - DEBUG - Query id: 01b52b3c-0001-e496-0000-00060cf24099
+2024-06-21 20:00:08,489 - DEBUG - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1719018008280749, 'priority': 0}]}
+2024-06-21 20:00:08,489 - DEBUG - Cache Entry: (0, 1719018008081624, 0)
+2024-06-21 20:00:08,489 - DEBUG - deserialize {'id': 0, 'timestamp': 1719018008280749, 'priority': 0}
+2024-06-21 20:00:08,489 - DEBUG - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-06-21 20:00:08,489 - DEBUG - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:08,489 - DEBUG - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:08,489 - DEBUG - deserialize_json_dict() returns
+2024-06-21 20:00:08,489 - DEBUG - Cache Entry: (0, 1719018008280749, 0)
+2024-06-21 20:00:08,489 - DEBUG - sfqid: 01b52b3c-0001-e496-0000-00060cf24099
+2024-06-21 20:00:08,489 - DEBUG - query execution done
+2024-06-21 20:00:08,489 - DEBUG - SUCCESS
+2024-06-21 20:00:08,489 - DEBUG - PUT OR GET: False
+2024-06-21 20:00:08,489 - DEBUG - Query result format: json
+2024-06-21 20:00:08,489 - DEBUG - parsing for result batch id: 1
+2024-06-21 20:00:08,489 - INFO - Number of results in first chunk: 1
+2024-06-21 20:00:08,489 - DEBUG - Executing query: 
+                CREATE OR REPLACE TABLE emp_sal_greater_mngr AS
+                SELECT e1.essn, e1.salary AS emp_salary, e1.super_ssn, e2.salary AS mngr_salary
+                FROM EMP_RAW.EMPLOYEE e1
+                JOIN EMP_RAW.EMPLOYEE e2 ON e1.super_ssn = e2.essn
+                WHERE e1.salary > e2.salary;
+            
+2024-06-21 20:00:08,489 - DEBUG - cursor
+2024-06-21 20:00:08,489 - DEBUG - executing SQL/command
+2024-06-21 20:00:08,489 - DEBUG - query: [CREATE OR REPLACE TABLE emp_sal_greater_mngr AS SELECT e1.essn, e1.salary AS emp...]
+2024-06-21 20:00:08,489 - DEBUG - binding: [CREATE OR REPLACE TABLE emp_sal_greater_mngr AS SELECT e1.essn, e1.salary AS emp...] with input=[None], processed=[{}]
+2024-06-21 20:00:08,489 - DEBUG - sequence counter: 3
+2024-06-21 20:00:08,489 - DEBUG - Request id: f49631b4-3efa-463d-bef6-bd00716c9bc8
+2024-06-21 20:00:08,489 - DEBUG - running query [CREATE OR REPLACE TABLE emp_sal_greater_mngr AS SELECT e1.essn, e1.salary AS emp...]
+2024-06-21 20:00:08,489 - DEBUG - is_file_transfer: True
+2024-06-21 20:00:08,489 - DEBUG - _cmd_query
+2024-06-21 20:00:08,489 - DEBUG - serialize_to_dict() called
+2024-06-21 20:00:08,489 - DEBUG - Cache Entry: (0, 1719018008280749, 0)
+2024-06-21 20:00:08,489 - DEBUG - serialize_to_dict(): data to send to server {'entries': [{'id': 0, 'timestamp': 1719018008280749, 'priority': 0, 'context': {}}]}
+2024-06-21 20:00:08,489 - DEBUG - sql=[CREATE OR REPLACE TABLE emp_sal_greater_mngr AS SELECT e1.essn, e1.salary AS emp...], sequence_id=[3], is_file_transfer=[False]
+2024-06-21 20:00:08,489 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:08,489 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:08,489 - DEBUG - Request guid: b5ccd738-1d7b-47de-9444-4c16f28b0ad9
+2024-06-21 20:00:08,489 - DEBUG - socket timeout: 60
+2024-06-21 20:00:10,578 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=f49631b4-3efa-463d-bef6-bd00716c9bc8&request_guid=b5ccd738-1d7b-47de-9444-4c16f28b0ad9 HTTP/1.1" 200 1270
+2024-06-21 20:00:10,578 - DEBUG - SUCCESS
+2024-06-21 20:00:10,578 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:10,578 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:10,578 - DEBUG - Query id: 01b52b3c-0001-e49a-0000-00060cf270d5
+2024-06-21 20:00:10,578 - DEBUG - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1719018010486498, 'priority': 0}]}
+2024-06-21 20:00:10,578 - DEBUG - Cache Entry: (0, 1719018008280749, 0)
+2024-06-21 20:00:10,578 - DEBUG - deserialize {'id': 0, 'timestamp': 1719018010486498, 'priority': 0}
+2024-06-21 20:00:10,578 - DEBUG - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-06-21 20:00:10,578 - DEBUG - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:10,594 - DEBUG - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:10,594 - DEBUG - deserialize_json_dict() returns
+2024-06-21 20:00:10,594 - DEBUG - Cache Entry: (0, 1719018010486498, 0)
+2024-06-21 20:00:10,594 - DEBUG - sfqid: 01b52b3c-0001-e49a-0000-00060cf270d5
+2024-06-21 20:00:10,594 - DEBUG - query execution done
+2024-06-21 20:00:10,594 - DEBUG - SUCCESS
+2024-06-21 20:00:10,594 - DEBUG - PUT OR GET: False
+2024-06-21 20:00:10,594 - DEBUG - Query result format: json
+2024-06-21 20:00:10,594 - DEBUG - parsing for result batch id: 1
+2024-06-21 20:00:10,594 - INFO - Number of results in first chunk: 1
+2024-06-21 20:00:10,594 - INFO - Executed query: 
+                CREATE OR REPLACE TABLE emp_sal_greater_mngr AS
+                SELECT e1.essn, e1.salary AS emp_salary, e1.super_ssn, e2.salary AS mngr_salary
+                FROM EMP_RAW.EMPLOYEE e1
+                JOIN EMP_RAW.EMPLOYEE e2 ON e1.super_ssn = e2.essn
+                WHERE e1.salary > e2.salary;
+            
+2024-06-21 20:00:10,594 - DEBUG - Generating report for query: SELECT * FROM emp_sal_greater_mngr
+2024-06-21 20:00:10,594 - DEBUG - Executing query: SELECT * FROM emp_sal_greater_mngr
+2024-06-21 20:00:10,594 - DEBUG - cursor
+2024-06-21 20:00:10,594 - DEBUG - executing SQL/command
+2024-06-21 20:00:10,594 - DEBUG - query: [SELECT * FROM emp_sal_greater_mngr]
+2024-06-21 20:00:10,594 - DEBUG - binding: [SELECT * FROM emp_sal_greater_mngr] with input=[None], processed=[{}]
+2024-06-21 20:00:10,594 - DEBUG - sequence counter: 4
+2024-06-21 20:00:10,594 - DEBUG - Request id: 121565e0-8e86-442b-80e9-e074dcb5f4cc
+2024-06-21 20:00:10,594 - DEBUG - running query [SELECT * FROM emp_sal_greater_mngr]
+2024-06-21 20:00:10,594 - DEBUG - is_file_transfer: True
+2024-06-21 20:00:10,594 - DEBUG - _cmd_query
+2024-06-21 20:00:10,594 - DEBUG - serialize_to_dict() called
+2024-06-21 20:00:10,594 - DEBUG - Cache Entry: (0, 1719018010486498, 0)
+2024-06-21 20:00:10,594 - DEBUG - serialize_to_dict(): data to send to server {'entries': [{'id': 0, 'timestamp': 1719018010486498, 'priority': 0, 'context': {}}]}
+2024-06-21 20:00:10,594 - DEBUG - sql=[SELECT * FROM emp_sal_greater_mngr], sequence_id=[4], is_file_transfer=[False]
+2024-06-21 20:00:10,594 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:10,594 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:10,594 - DEBUG - Request guid: 1eb9c405-fbfa-485f-85f2-29f7e8bfb5ce
+2024-06-21 20:00:10,594 - DEBUG - socket timeout: 60
+2024-06-21 20:00:11,245 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=121565e0-8e86-442b-80e9-e074dcb5f4cc&request_guid=1eb9c405-fbfa-485f-85f2-29f7e8bfb5ce HTTP/1.1" 200 2039
+2024-06-21 20:00:11,254 - DEBUG - SUCCESS
+2024-06-21 20:00:11,254 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:11,254 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:11,254 - DEBUG - Query id: 01b52b3c-0001-e497-0000-00060cf2b0c9
+2024-06-21 20:00:11,254 - DEBUG - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1719018010972500, 'priority': 0}]}
+2024-06-21 20:00:11,254 - DEBUG - Cache Entry: (0, 1719018010486498, 0)
+2024-06-21 20:00:11,254 - DEBUG - deserialize {'id': 0, 'timestamp': 1719018010972500, 'priority': 0}
+2024-06-21 20:00:11,254 - DEBUG - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-06-21 20:00:11,254 - DEBUG - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:11,254 - DEBUG - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:11,254 - DEBUG - deserialize_json_dict() returns
+2024-06-21 20:00:11,254 - DEBUG - Cache Entry: (0, 1719018010972500, 0)
+2024-06-21 20:00:11,254 - DEBUG - sfqid: 01b52b3c-0001-e497-0000-00060cf2b0c9
+2024-06-21 20:00:11,254 - DEBUG - query execution done
+2024-06-21 20:00:11,254 - DEBUG - SUCCESS
+2024-06-21 20:00:11,254 - DEBUG - PUT OR GET: False
+2024-06-21 20:00:11,254 - DEBUG - Query result format: arrow
+2024-06-21 20:00:11,254 - INFO - Number of results in first chunk: 1
+2024-06-21 20:00:11,254 - INFO - Executed query: SELECT * FROM emp_sal_greater_mngr
+2024-06-21 20:00:11,254 - DEBUG - Using nanoarrow as the arrow data converter
+2024-06-21 20:00:11,254 - DEBUG - Arrow BatchSize: 1
+2024-06-21 20:00:11,254 - DEBUG - Arrow chunk info: batchCount 1, columnCount 4, use_numpy: 0
+2024-06-21 20:00:11,254 - DEBUG - Batches read: 0
+2024-06-21 20:00:11,254 - DEBUG - beginning to schedule result batch downloads
+2024-06-21 20:00:11,254 - DEBUG - Current batch index: 0, rows in current batch: 1
+2024-06-21 20:00:11,270 - INFO - Report generated: emp_sal_greater_mngr.txt
+2024-06-21 20:00:11,270 - DEBUG - Executing query: 
+                CREATE OR REPLACE TABLE emp_project_dept AS
+                SELECT e.essn, p.pname, ed.dname AS emp_dept_name, pd.dname AS proj_dept_name
+                FROM EMP_RAW.EMPLOYEE e
+                JOIN EMP_RAW.DEPARTMENT ed ON e.dno = ed.dnumber
+                JOIN EMP_RAW.WORKS_ON w ON e.essn = w.essn
+                JOIN EMP_RAW.PROJECT p ON w.pno = p.pnumber
+                JOIN EMP_RAW.DEPARTMENT pd ON p.dnum = pd.dnumber
+                WHERE e.dno <> p.dnum;
+            
+2024-06-21 20:00:11,270 - DEBUG - cursor
+2024-06-21 20:00:11,270 - DEBUG - executing SQL/command
+2024-06-21 20:00:11,270 - DEBUG - query: [CREATE OR REPLACE TABLE emp_project_dept AS SELECT e.essn, p.pname, ed.dname AS ...]
+2024-06-21 20:00:11,286 - DEBUG - binding: [CREATE OR REPLACE TABLE emp_project_dept AS SELECT e.essn, p.pname, ed.dname AS ...] with input=[None], processed=[{}]
+2024-06-21 20:00:11,286 - DEBUG - sequence counter: 5
+2024-06-21 20:00:11,286 - DEBUG - Request id: c2be5ef9-09e3-47c2-9375-87043b71adc7
+2024-06-21 20:00:11,286 - DEBUG - running query [CREATE OR REPLACE TABLE emp_project_dept AS SELECT e.essn, p.pname, ed.dname AS ...]
+2024-06-21 20:00:11,286 - DEBUG - is_file_transfer: True
+2024-06-21 20:00:11,286 - DEBUG - _cmd_query
+2024-06-21 20:00:11,286 - DEBUG - serialize_to_dict() called
+2024-06-21 20:00:11,286 - DEBUG - Cache Entry: (0, 1719018010972500, 0)
+2024-06-21 20:00:11,286 - DEBUG - serialize_to_dict(): data to send to server {'entries': [{'id': 0, 'timestamp': 1719018010972500, 'priority': 0, 'context': {}}]}
+2024-06-21 20:00:11,286 - DEBUG - sql=[CREATE OR REPLACE TABLE emp_project_dept AS SELECT e.essn, p.pname, ed.dname AS ...], sequence_id=[5], is_file_transfer=[False]
+2024-06-21 20:00:11,286 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:11,286 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:11,286 - DEBUG - Request guid: 747cfbf6-7a41-42ae-9e95-79aac67bdf1e
+2024-06-21 20:00:11,286 - DEBUG - socket timeout: 60
+2024-06-21 20:00:12,920 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=c2be5ef9-09e3-47c2-9375-87043b71adc7&request_guid=747cfbf6-7a41-42ae-9e95-79aac67bdf1e HTTP/1.1" 200 1267
+2024-06-21 20:00:12,920 - DEBUG - SUCCESS
+2024-06-21 20:00:12,920 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:12,920 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:12,920 - DEBUG - Query id: 01b52b3c-0001-e495-0000-00060cf2a0a9
+2024-06-21 20:00:12,920 - DEBUG - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1719018012795922, 'priority': 0}]}
+2024-06-21 20:00:12,920 - DEBUG - Cache Entry: (0, 1719018010972500, 0)
+2024-06-21 20:00:12,920 - DEBUG - deserialize {'id': 0, 'timestamp': 1719018012795922, 'priority': 0}
+2024-06-21 20:00:12,920 - DEBUG - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-06-21 20:00:12,920 - DEBUG - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:12,920 - DEBUG - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:12,920 - DEBUG - deserialize_json_dict() returns
+2024-06-21 20:00:12,920 - DEBUG - Cache Entry: (0, 1719018012795922, 0)
+2024-06-21 20:00:12,920 - DEBUG - sfqid: 01b52b3c-0001-e495-0000-00060cf2a0a9
+2024-06-21 20:00:12,935 - DEBUG - query execution done
+2024-06-21 20:00:12,935 - DEBUG - SUCCESS
+2024-06-21 20:00:12,935 - DEBUG - PUT OR GET: False
+2024-06-21 20:00:12,936 - DEBUG - Query result format: json
+2024-06-21 20:00:12,936 - DEBUG - parsing for result batch id: 1
+2024-06-21 20:00:12,936 - INFO - Number of results in first chunk: 1
+2024-06-21 20:00:12,936 - INFO - Executed query: 
+                CREATE OR REPLACE TABLE emp_project_dept AS
+                SELECT e.essn, p.pname, ed.dname AS emp_dept_name, pd.dname AS proj_dept_name
+                FROM EMP_RAW.EMPLOYEE e
+                JOIN EMP_RAW.DEPARTMENT ed ON e.dno = ed.dnumber
+                JOIN EMP_RAW.WORKS_ON w ON e.essn = w.essn
+                JOIN EMP_RAW.PROJECT p ON w.pno = p.pnumber
+                JOIN EMP_RAW.DEPARTMENT pd ON p.dnum = pd.dnumber
+                WHERE e.dno <> p.dnum;
+            
+2024-06-21 20:00:12,936 - DEBUG - Generating report for query: SELECT * FROM emp_project_dept
+2024-06-21 20:00:12,936 - DEBUG - Executing query: SELECT * FROM emp_project_dept
+2024-06-21 20:00:12,936 - DEBUG - cursor
+2024-06-21 20:00:12,936 - DEBUG - executing SQL/command
+2024-06-21 20:00:12,936 - DEBUG - query: [SELECT * FROM emp_project_dept]
+2024-06-21 20:00:12,936 - DEBUG - binding: [SELECT * FROM emp_project_dept] with input=[None], processed=[{}]
+2024-06-21 20:00:12,936 - DEBUG - sequence counter: 6
+2024-06-21 20:00:12,936 - DEBUG - Request id: e876a64d-e53f-471d-b2f6-3861502e9bd0
+2024-06-21 20:00:12,936 - DEBUG - running query [SELECT * FROM emp_project_dept]
+2024-06-21 20:00:12,936 - DEBUG - is_file_transfer: True
+2024-06-21 20:00:12,936 - DEBUG - _cmd_query
+2024-06-21 20:00:12,936 - DEBUG - serialize_to_dict() called
+2024-06-21 20:00:12,936 - DEBUG - Cache Entry: (0, 1719018012795922, 0)
+2024-06-21 20:00:12,936 - DEBUG - serialize_to_dict(): data to send to server {'entries': [{'id': 0, 'timestamp': 1719018012795922, 'priority': 0, 'context': {}}]}
+2024-06-21 20:00:12,936 - DEBUG - sql=[SELECT * FROM emp_project_dept], sequence_id=[6], is_file_transfer=[False]
+2024-06-21 20:00:12,936 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:12,936 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:12,936 - DEBUG - Request guid: e705af0d-3e4b-400e-8360-7198fd695603
+2024-06-21 20:00:12,936 - DEBUG - socket timeout: 60
+2024-06-21 20:00:13,085 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=e876a64d-e53f-471d-b2f6-3861502e9bd0&request_guid=e705af0d-3e4b-400e-8360-7198fd695603 HTTP/1.1" 200 2423
+2024-06-21 20:00:13,085 - DEBUG - SUCCESS
+2024-06-21 20:00:13,085 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:13,085 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:13,085 - DEBUG - Query id: 01b52b3c-0001-e495-0000-00060cf2a0ad
+2024-06-21 20:00:13,085 - DEBUG - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1719018012977887, 'priority': 0}]}
+2024-06-21 20:00:13,085 - DEBUG - Cache Entry: (0, 1719018012795922, 0)
+2024-06-21 20:00:13,085 - DEBUG - deserialize {'id': 0, 'timestamp': 1719018012977887, 'priority': 0}
+2024-06-21 20:00:13,085 - DEBUG - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-06-21 20:00:13,085 - DEBUG - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:13,085 - DEBUG - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:13,085 - DEBUG - deserialize_json_dict() returns
+2024-06-21 20:00:13,085 - DEBUG - Cache Entry: (0, 1719018012977887, 0)
+2024-06-21 20:00:13,085 - DEBUG - sfqid: 01b52b3c-0001-e495-0000-00060cf2a0ad
+2024-06-21 20:00:13,085 - DEBUG - query execution done
+2024-06-21 20:00:13,085 - DEBUG - SUCCESS
+2024-06-21 20:00:13,085 - DEBUG - PUT OR GET: False
+2024-06-21 20:00:13,085 - DEBUG - Query result format: arrow
+2024-06-21 20:00:13,085 - INFO - Number of results in first chunk: 11
+2024-06-21 20:00:13,085 - INFO - Executed query: SELECT * FROM emp_project_dept
+2024-06-21 20:00:13,085 - DEBUG - Using nanoarrow as the arrow data converter
+2024-06-21 20:00:13,085 - DEBUG - Arrow BatchSize: 1
+2024-06-21 20:00:13,085 - DEBUG - Arrow chunk info: batchCount 1, columnCount 4, use_numpy: 0
+2024-06-21 20:00:13,085 - DEBUG - Batches read: 0
+2024-06-21 20:00:13,085 - DEBUG - beginning to schedule result batch downloads
+2024-06-21 20:00:13,085 - DEBUG - Current batch index: 0, rows in current batch: 11
+2024-06-21 20:00:13,093 - INFO - Report generated: emp_project_dept.txt
+2024-06-21 20:00:13,093 - DEBUG - Executing query: 
+                CREATE OR REPLACE TABLE emp_dept_least AS
+                SELECT d.dname, d.dnumber, COUNT(e.essn) AS no_of_emp
+                FROM EMP_RAW.DEPARTMENT d
+                LEFT JOIN EMP_RAW.EMPLOYEE e ON d.dnumber = e.dno
+                GROUP BY d.dname, d.dnumber
+                ORDER BY no_of_emp ASC
+                LIMIT 1;
+            
+2024-06-21 20:00:13,093 - DEBUG - cursor
+2024-06-21 20:00:13,093 - DEBUG - executing SQL/command
+2024-06-21 20:00:13,093 - DEBUG - query: [CREATE OR REPLACE TABLE emp_dept_least AS SELECT d.dname, d.dnumber, COUNT(e.ess...]
+2024-06-21 20:00:13,093 - DEBUG - binding: [CREATE OR REPLACE TABLE emp_dept_least AS SELECT d.dname, d.dnumber, COUNT(e.ess...] with input=[None], processed=[{}]
+2024-06-21 20:00:13,093 - DEBUG - sequence counter: 7
+2024-06-21 20:00:13,093 - DEBUG - Request id: fe96ce4c-7671-4d08-be0f-8914c8e24975
+2024-06-21 20:00:13,093 - DEBUG - running query [CREATE OR REPLACE TABLE emp_dept_least AS SELECT d.dname, d.dnumber, COUNT(e.ess...]
+2024-06-21 20:00:13,093 - DEBUG - is_file_transfer: True
+2024-06-21 20:00:13,093 - DEBUG - _cmd_query
+2024-06-21 20:00:13,093 - DEBUG - serialize_to_dict() called
+2024-06-21 20:00:13,093 - DEBUG - Cache Entry: (0, 1719018012977887, 0)
+2024-06-21 20:00:13,093 - DEBUG - serialize_to_dict(): data to send to server {'entries': [{'id': 0, 'timestamp': 1719018012977887, 'priority': 0, 'context': {}}]}
+2024-06-21 20:00:13,093 - DEBUG - sql=[CREATE OR REPLACE TABLE emp_dept_least AS SELECT d.dname, d.dnumber, COUNT(e.ess...], sequence_id=[7], is_file_transfer=[False]
+2024-06-21 20:00:13,093 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:13,093 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:13,093 - DEBUG - Request guid: 3524858b-493f-403b-b525-9c4d09922cf5
+2024-06-21 20:00:13,093 - DEBUG - socket timeout: 60
+2024-06-21 20:00:14,169 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=fe96ce4c-7671-4d08-be0f-8914c8e24975&request_guid=3524858b-493f-403b-b525-9c4d09922cf5 HTTP/1.1" 200 1267
+2024-06-21 20:00:14,169 - DEBUG - SUCCESS
+2024-06-21 20:00:14,169 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:14,169 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:14,169 - DEBUG - Query id: 01b52b3c-0001-e6c6-0000-00060cf280c1
+2024-06-21 20:00:14,169 - DEBUG - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1719018014064729, 'priority': 0}]}
+2024-06-21 20:00:14,169 - DEBUG - Cache Entry: (0, 1719018012977887, 0)
+2024-06-21 20:00:14,169 - DEBUG - deserialize {'id': 0, 'timestamp': 1719018014064729, 'priority': 0}
+2024-06-21 20:00:14,180 - DEBUG - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-06-21 20:00:14,180 - DEBUG - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:14,180 - DEBUG - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:14,180 - DEBUG - deserialize_json_dict() returns
+2024-06-21 20:00:14,180 - DEBUG - Cache Entry: (0, 1719018014064729, 0)
+2024-06-21 20:00:14,180 - DEBUG - sfqid: 01b52b3c-0001-e6c6-0000-00060cf280c1
+2024-06-21 20:00:14,180 - DEBUG - query execution done
+2024-06-21 20:00:14,180 - DEBUG - SUCCESS
+2024-06-21 20:00:14,180 - DEBUG - PUT OR GET: False
+2024-06-21 20:00:14,180 - DEBUG - Query result format: json
+2024-06-21 20:00:14,180 - DEBUG - parsing for result batch id: 1
+2024-06-21 20:00:14,180 - INFO - Number of results in first chunk: 1
+2024-06-21 20:00:14,180 - INFO - Executed query: 
+                CREATE OR REPLACE TABLE emp_dept_least AS
+                SELECT d.dname, d.dnumber, COUNT(e.essn) AS no_of_emp
+                FROM EMP_RAW.DEPARTMENT d
+                LEFT JOIN EMP_RAW.EMPLOYEE e ON d.dnumber = e.dno
+                GROUP BY d.dname, d.dnumber
+                ORDER BY no_of_emp ASC
+                LIMIT 1;
+            
+2024-06-21 20:00:14,180 - DEBUG - Generating report for query: SELECT * FROM emp_dept_least
+2024-06-21 20:00:14,180 - DEBUG - Executing query: SELECT * FROM emp_dept_least
+2024-06-21 20:00:14,180 - DEBUG - cursor
+2024-06-21 20:00:14,180 - DEBUG - executing SQL/command
+2024-06-21 20:00:14,180 - DEBUG - query: [SELECT * FROM emp_dept_least]
+2024-06-21 20:00:14,180 - DEBUG - binding: [SELECT * FROM emp_dept_least] with input=[None], processed=[{}]
+2024-06-21 20:00:14,180 - DEBUG - sequence counter: 8
+2024-06-21 20:00:14,180 - DEBUG - Request id: fa58c845-2397-4b4a-8a1d-78f36573113b
+2024-06-21 20:00:14,180 - DEBUG - running query [SELECT * FROM emp_dept_least]
+2024-06-21 20:00:14,180 - DEBUG - is_file_transfer: True
+2024-06-21 20:00:14,180 - DEBUG - _cmd_query
+2024-06-21 20:00:14,180 - DEBUG - serialize_to_dict() called
+2024-06-21 20:00:14,180 - DEBUG - Cache Entry: (0, 1719018014064729, 0)
+2024-06-21 20:00:14,180 - DEBUG - serialize_to_dict(): data to send to server {'entries': [{'id': 0, 'timestamp': 1719018014064729, 'priority': 0, 'context': {}}]}
+2024-06-21 20:00:14,180 - DEBUG - sql=[SELECT * FROM emp_dept_least], sequence_id=[8], is_file_transfer=[False]
+2024-06-21 20:00:14,180 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:14,180 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:14,180 - DEBUG - Request guid: 63b5dfc9-6b48-4f9f-8c37-f95638ad9954
+2024-06-21 20:00:14,180 - DEBUG - socket timeout: 60
+2024-06-21 20:00:14,306 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=fa58c845-2397-4b4a-8a1d-78f36573113b&request_guid=63b5dfc9-6b48-4f9f-8c37-f95638ad9954 HTTP/1.1" 200 None
+2024-06-21 20:00:14,306 - DEBUG - SUCCESS
+2024-06-21 20:00:14,306 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:14,306 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:14,306 - DEBUG - Query id: 01b52b3c-0001-e49a-0000-00060cf270d9
+2024-06-21 20:00:14,306 - DEBUG - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1719018014216579, 'priority': 0}]}
+2024-06-21 20:00:14,306 - DEBUG - Cache Entry: (0, 1719018014064729, 0)
+2024-06-21 20:00:14,306 - DEBUG - deserialize {'id': 0, 'timestamp': 1719018014216579, 'priority': 0}
+2024-06-21 20:00:14,306 - DEBUG - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-06-21 20:00:14,306 - DEBUG - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:14,306 - DEBUG - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:14,321 - DEBUG - deserialize_json_dict() returns
+2024-06-21 20:00:14,321 - DEBUG - Cache Entry: (0, 1719018014216579, 0)
+2024-06-21 20:00:14,321 - DEBUG - sfqid: 01b52b3c-0001-e49a-0000-00060cf270d9
+2024-06-21 20:00:14,321 - DEBUG - query execution done
+2024-06-21 20:00:14,321 - DEBUG - SUCCESS
+2024-06-21 20:00:14,321 - DEBUG - PUT OR GET: False
+2024-06-21 20:00:14,321 - DEBUG - Query result format: arrow
+2024-06-21 20:00:14,321 - INFO - Number of results in first chunk: 1
+2024-06-21 20:00:14,321 - INFO - Executed query: SELECT * FROM emp_dept_least
+2024-06-21 20:00:14,321 - DEBUG - Using nanoarrow as the arrow data converter
+2024-06-21 20:00:14,321 - DEBUG - Arrow BatchSize: 1
+2024-06-21 20:00:14,321 - DEBUG - Arrow chunk info: batchCount 1, columnCount 3, use_numpy: 0
+2024-06-21 20:00:14,321 - DEBUG - Batches read: 0
+2024-06-21 20:00:14,321 - DEBUG - beginning to schedule result batch downloads
+2024-06-21 20:00:14,321 - DEBUG - Current batch index: 0, rows in current batch: 1
+2024-06-21 20:00:14,331 - INFO - Report generated: emp_dept_least.txt
+2024-06-21 20:00:14,331 - DEBUG - Executing query: 
+                CREATE OR REPLACE TABLE emp_tot_hrs_spent AS
+                SELECT e.essn, d.dependent_name, w.pno, SUM(w.hours) AS total_hours_spent
+                FROM EMP_RAW.EMPLOYEE e
+                JOIN EMP_RAW.DEPENDENT d ON e.essn = d.essn
+                JOIN EMP_RAW.WORKS_ON w ON e.essn = w.essn
+                GROUP BY e.essn, d.dependent_name, w.pno;
+            
+2024-06-21 20:00:14,331 - DEBUG - cursor
+2024-06-21 20:00:14,331 - DEBUG - executing SQL/command
+2024-06-21 20:00:14,331 - DEBUG - query: [CREATE OR REPLACE TABLE emp_tot_hrs_spent AS SELECT e.essn, d.dependent_name, w....]
+2024-06-21 20:00:14,331 - DEBUG - binding: [CREATE OR REPLACE TABLE emp_tot_hrs_spent AS SELECT e.essn, d.dependent_name, w....] with input=[None], processed=[{}]
+2024-06-21 20:00:14,331 - DEBUG - sequence counter: 9
+2024-06-21 20:00:14,331 - DEBUG - Request id: cc99f786-b494-4ff2-af2a-a2abd8fbcb9e
+2024-06-21 20:00:14,331 - DEBUG - running query [CREATE OR REPLACE TABLE emp_tot_hrs_spent AS SELECT e.essn, d.dependent_name, w....]
+2024-06-21 20:00:14,331 - DEBUG - is_file_transfer: True
+2024-06-21 20:00:14,331 - DEBUG - _cmd_query
+2024-06-21 20:00:14,331 - DEBUG - serialize_to_dict() called
+2024-06-21 20:00:14,331 - DEBUG - Cache Entry: (0, 1719018014216579, 0)
+2024-06-21 20:00:14,331 - DEBUG - serialize_to_dict(): data to send to server {'entries': [{'id': 0, 'timestamp': 1719018014216579, 'priority': 0, 'context': {}}]}
+2024-06-21 20:00:14,331 - DEBUG - sql=[CREATE OR REPLACE TABLE emp_tot_hrs_spent AS SELECT e.essn, d.dependent_name, w....], sequence_id=[9], is_file_transfer=[False]
+2024-06-21 20:00:14,331 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:14,331 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:14,331 - DEBUG - Request guid: 5f8e6635-363f-403f-8d48-6822334641a5
+2024-06-21 20:00:14,331 - DEBUG - socket timeout: 60
+2024-06-21 20:00:15,862 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=cc99f786-b494-4ff2-af2a-a2abd8fbcb9e&request_guid=5f8e6635-363f-403f-8d48-6822334641a5 HTTP/1.1" 200 1276
+2024-06-21 20:00:15,862 - DEBUG - SUCCESS
+2024-06-21 20:00:15,862 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:15,862 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:15,862 - DEBUG - Query id: 01b52b3c-0001-e498-0000-00060cf260c1
+2024-06-21 20:00:15,862 - DEBUG - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1719018015756467, 'priority': 0}]}
+2024-06-21 20:00:15,862 - DEBUG - Cache Entry: (0, 1719018014216579, 0)
+2024-06-21 20:00:15,862 - DEBUG - deserialize {'id': 0, 'timestamp': 1719018015756467, 'priority': 0}
+2024-06-21 20:00:15,862 - DEBUG - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-06-21 20:00:15,862 - DEBUG - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:15,862 - DEBUG - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:15,862 - DEBUG - deserialize_json_dict() returns
+2024-06-21 20:00:15,862 - DEBUG - Cache Entry: (0, 1719018015756467, 0)
+2024-06-21 20:00:15,862 - DEBUG - sfqid: 01b52b3c-0001-e498-0000-00060cf260c1
+2024-06-21 20:00:15,862 - DEBUG - query execution done
+2024-06-21 20:00:15,862 - DEBUG - SUCCESS
+2024-06-21 20:00:15,862 - DEBUG - PUT OR GET: False
+2024-06-21 20:00:15,862 - DEBUG - Query result format: json
+2024-06-21 20:00:15,862 - DEBUG - parsing for result batch id: 1
+2024-06-21 20:00:15,862 - INFO - Number of results in first chunk: 1
+2024-06-21 20:00:15,862 - INFO - Executed query: 
+                CREATE OR REPLACE TABLE emp_tot_hrs_spent AS
+                SELECT e.essn, d.dependent_name, w.pno, SUM(w.hours) AS total_hours_spent
+                FROM EMP_RAW.EMPLOYEE e
+                JOIN EMP_RAW.DEPENDENT d ON e.essn = d.essn
+                JOIN EMP_RAW.WORKS_ON w ON e.essn = w.essn
+                GROUP BY e.essn, d.dependent_name, w.pno;
+            
+2024-06-21 20:00:15,862 - DEBUG - Generating report for query: SELECT * FROM emp_tot_hrs_spent
+2024-06-21 20:00:15,862 - DEBUG - Executing query: SELECT * FROM emp_tot_hrs_spent
+2024-06-21 20:00:15,862 - DEBUG - cursor
+2024-06-21 20:00:15,862 - DEBUG - executing SQL/command
+2024-06-21 20:00:15,862 - DEBUG - query: [SELECT * FROM emp_tot_hrs_spent]
+2024-06-21 20:00:15,862 - DEBUG - binding: [SELECT * FROM emp_tot_hrs_spent] with input=[None], processed=[{}]
+2024-06-21 20:00:15,862 - DEBUG - sequence counter: 10
+2024-06-21 20:00:15,862 - DEBUG - Request id: 79fd3e8e-af49-4570-acb8-66f1c71434e7
+2024-06-21 20:00:15,862 - DEBUG - running query [SELECT * FROM emp_tot_hrs_spent]
+2024-06-21 20:00:15,862 - DEBUG - is_file_transfer: True
+2024-06-21 20:00:15,862 - DEBUG - _cmd_query
+2024-06-21 20:00:15,862 - DEBUG - serialize_to_dict() called
+2024-06-21 20:00:15,862 - DEBUG - Cache Entry: (0, 1719018015756467, 0)
+2024-06-21 20:00:15,862 - DEBUG - serialize_to_dict(): data to send to server {'entries': [{'id': 0, 'timestamp': 1719018015756467, 'priority': 0, 'context': {}}]}
+2024-06-21 20:00:15,862 - DEBUG - sql=[SELECT * FROM emp_tot_hrs_spent], sequence_id=[10], is_file_transfer=[False]
+2024-06-21 20:00:15,862 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:15,862 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:15,862 - DEBUG - Request guid: 3935c7ba-4797-46ca-9064-e59420a88b37
+2024-06-21 20:00:15,862 - DEBUG - socket timeout: 60
+2024-06-21 20:00:16,161 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=79fd3e8e-af49-4570-acb8-66f1c71434e7&request_guid=3935c7ba-4797-46ca-9064-e59420a88b37 HTTP/1.1" 200 2432
+2024-06-21 20:00:16,161 - DEBUG - SUCCESS
+2024-06-21 20:00:16,161 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:16,161 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:16,161 - DEBUG - Query id: 01b52b3c-0001-e49a-0000-00060cf270dd
+2024-06-21 20:00:16,161 - DEBUG - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1719018015963165, 'priority': 0}]}
+2024-06-21 20:00:16,161 - DEBUG - Cache Entry: (0, 1719018015756467, 0)
+2024-06-21 20:00:16,161 - DEBUG - deserialize {'id': 0, 'timestamp': 1719018015963165, 'priority': 0}
+2024-06-21 20:00:16,161 - DEBUG - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-06-21 20:00:16,161 - DEBUG - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:16,161 - DEBUG - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:16,161 - DEBUG - deserialize_json_dict() returns
+2024-06-21 20:00:16,161 - DEBUG - Cache Entry: (0, 1719018015963165, 0)
+2024-06-21 20:00:16,161 - DEBUG - sfqid: 01b52b3c-0001-e49a-0000-00060cf270dd
+2024-06-21 20:00:16,161 - DEBUG - query execution done
+2024-06-21 20:00:16,161 - DEBUG - SUCCESS
+2024-06-21 20:00:16,161 - DEBUG - PUT OR GET: False
+2024-06-21 20:00:16,161 - DEBUG - Query result format: arrow
+2024-06-21 20:00:16,161 - INFO - Number of results in first chunk: 26
+2024-06-21 20:00:16,161 - INFO - Executed query: SELECT * FROM emp_tot_hrs_spent
+2024-06-21 20:00:16,161 - DEBUG - Using nanoarrow as the arrow data converter
+2024-06-21 20:00:16,161 - DEBUG - Arrow BatchSize: 1
+2024-06-21 20:00:16,161 - DEBUG - Arrow chunk info: batchCount 1, columnCount 4, use_numpy: 0
+2024-06-21 20:00:16,176 - DEBUG - Batches read: 0
+2024-06-21 20:00:16,176 - DEBUG - beginning to schedule result batch downloads
+2024-06-21 20:00:16,176 - DEBUG - Current batch index: 0, rows in current batch: 26
+2024-06-21 20:00:16,183 - INFO - Report generated: emp_tot_hrs_spent.txt
+2024-06-21 20:00:16,192 - DEBUG - Executing query: 
+                CREATE OR REPLACE TABLE emp_full_details AS
+                SELECT 
+                    e.essn, e.fname, e.minit, e.lname, e.bdate, e.address, e.sex, e.salary, e.super_ssn, 
+                    d.dnumber AS dno, d.dname, dl.dlocation, 
+                    p.pname, p.pnumber, p.plocation, 
+                    SUM(w.hours) AS total_hours, 
+                    dep.dependent_name, dep.sex AS dependent_sex, dep.relationship AS dependent_relation
+                FROM P01_EMP.EMP_RAW.EMPLOYEE e
+                JOIN P01_EMP.EMP_RAW.DEPARTMENT d ON e.dno = d.dnumber
+                JOIN P01_EMP.EMP_RAW.DEPT_LOCATIONS dl ON d.dnumber = dl.dnumber
+                JOIN P01_EMP.EMP_RAW.WORKS_ON w ON e.essn = w.essn
+                JOIN P01_EMP.EMP_RAW.PROJECT p ON w.pno = p.pnumber
+                LEFT JOIN dependent dep ON e.essn = dep.essn
+                GROUP BY e.essn, e.fname, e.minit, e.lname, e.bdate, e.address, e.sex, e.salary, e.super_ssn, 
+                         d.dnumber, d.dname, dl.dlocation, 
+                         p.pname, p.pnumber, p.plocation, 
+                         dep.dependent_name, dep.sex, dep.relationship;
+            
+2024-06-21 20:00:16,192 - DEBUG - cursor
+2024-06-21 20:00:16,192 - DEBUG - executing SQL/command
+2024-06-21 20:00:16,192 - DEBUG - query: [CREATE OR REPLACE TABLE emp_full_details AS SELECT e.essn, e.fname, e.minit, e.l...]
+2024-06-21 20:00:16,192 - DEBUG - binding: [CREATE OR REPLACE TABLE emp_full_details AS SELECT e.essn, e.fname, e.minit, e.l...] with input=[None], processed=[{}]
+2024-06-21 20:00:16,192 - DEBUG - sequence counter: 11
+2024-06-21 20:00:16,192 - DEBUG - Request id: 6232e74c-9122-4a3f-a1be-89aada05fbe8
+2024-06-21 20:00:16,192 - DEBUG - running query [CREATE OR REPLACE TABLE emp_full_details AS SELECT e.essn, e.fname, e.minit, e.l...]
+2024-06-21 20:00:16,192 - DEBUG - is_file_transfer: True
+2024-06-21 20:00:16,192 - DEBUG - _cmd_query
+2024-06-21 20:00:16,192 - DEBUG - serialize_to_dict() called
+2024-06-21 20:00:16,192 - DEBUG - Cache Entry: (0, 1719018015963165, 0)
+2024-06-21 20:00:16,192 - DEBUG - serialize_to_dict(): data to send to server {'entries': [{'id': 0, 'timestamp': 1719018015963165, 'priority': 0, 'context': {}}]}
+2024-06-21 20:00:16,192 - DEBUG - sql=[CREATE OR REPLACE TABLE emp_full_details AS SELECT e.essn, e.fname, e.minit, e.l...], sequence_id=[11], is_file_transfer=[False]
+2024-06-21 20:00:16,192 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:16,192 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:16,192 - DEBUG - Request guid: b857d693-a4ec-4f20-a423-2809d6320d91
+2024-06-21 20:00:16,192 - DEBUG - socket timeout: 60
+2024-06-21 20:00:18,109 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=6232e74c-9122-4a3f-a1be-89aada05fbe8&request_guid=b857d693-a4ec-4f20-a423-2809d6320d91 HTTP/1.1" 200 372
+2024-06-21 20:00:18,109 - DEBUG - SUCCESS
+2024-06-21 20:00:18,109 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:18,109 - DEBUG - ret[code] = 002003, after post request
+2024-06-21 20:00:18,109 - DEBUG - Query id: 01b52b3c-0001-e496-0000-00060cf2409d
+2024-06-21 20:00:18,109 - DEBUG - sfqid: 01b52b3c-0001-e496-0000-00060cf2409d
+2024-06-21 20:00:18,109 - DEBUG - query execution done
+2024-06-21 20:00:18,109 - DEBUG - {'data': {'internalError': False, 'errorCode': '002003', 'age': 0, 'sqlState': '42S02', 'queryId': '01b52b3c-0001-e496-0000-00060cf2409d', 'line': 13, 'pos': 26, 'type': 'COMPILATION'}, 'code': '002003', 'message': "SQL compilation error:\nObject 'DEPENDENT' does not exist or not authorized.", 'success': False, 'headers': None}
+2024-06-21 20:00:18,125 - ERROR - Error executing query: 002003 (42S02): 01b52b3c-0001-e496-0000-00060cf2409d: SQL compilation error:
+Object 'DEPENDENT' does not exist or not authorized.
+2024-06-21 20:00:18,125 - DEBUG - Generating report for query: SELECT * FROM emp_full_details
+2024-06-21 20:00:18,125 - DEBUG - Executing query: SELECT * FROM emp_full_details
+2024-06-21 20:00:18,125 - DEBUG - cursor
+2024-06-21 20:00:18,125 - DEBUG - executing SQL/command
+2024-06-21 20:00:18,125 - DEBUG - query: [SELECT * FROM emp_full_details]
+2024-06-21 20:00:18,125 - DEBUG - binding: [SELECT * FROM emp_full_details] with input=[None], processed=[{}]
+2024-06-21 20:00:18,125 - DEBUG - sequence counter: 12
+2024-06-21 20:00:18,125 - DEBUG - Request id: 13d6f0fc-f310-47cb-9456-30163409d080
+2024-06-21 20:00:18,125 - DEBUG - running query [SELECT * FROM emp_full_details]
+2024-06-21 20:00:18,125 - DEBUG - is_file_transfer: True
+2024-06-21 20:00:18,125 - DEBUG - _cmd_query
+2024-06-21 20:00:18,125 - DEBUG - serialize_to_dict() called
+2024-06-21 20:00:18,125 - DEBUG - Cache Entry: (0, 1719018015963165, 0)
+2024-06-21 20:00:18,125 - DEBUG - serialize_to_dict(): data to send to server {'entries': [{'id': 0, 'timestamp': 1719018015963165, 'priority': 0, 'context': {}}]}
+2024-06-21 20:00:18,125 - DEBUG - sql=[SELECT * FROM emp_full_details], sequence_id=[12], is_file_transfer=[False]
+2024-06-21 20:00:18,125 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:18,125 - DEBUG - remaining request timeout: N/A ms, retry cnt: 1
+2024-06-21 20:00:18,125 - DEBUG - Request guid: d4c599c7-2155-4b44-90d4-1d858efbf0f7
+2024-06-21 20:00:18,125 - DEBUG - socket timeout: 60
+2024-06-21 20:00:18,250 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /queries/v1/query-request?requestId=13d6f0fc-f310-47cb-9456-30163409d080&request_guid=d4c599c7-2155-4b44-90d4-1d858efbf0f7 HTTP/1.1" 200 1438
+2024-06-21 20:00:18,250 - DEBUG - SUCCESS
+2024-06-21 20:00:18,250 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:18,250 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:18,250 - DEBUG - Query id: 01b52b3c-0001-e495-0000-00060cf2a0b1
+2024-06-21 20:00:18,250 - DEBUG - deserialize_json_dict() called: data from server: {'entries': [{'id': 0, 'timestamp': 1719018018156876, 'priority': 0}]}
+2024-06-21 20:00:18,250 - DEBUG - Cache Entry: (0, 1719018015963165, 0)
+2024-06-21 20:00:18,250 - DEBUG - deserialize {'id': 0, 'timestamp': 1719018018156876, 'priority': 0}
+2024-06-21 20:00:18,250 - DEBUG - sync_priority_map called priority_map size = 0, new_priority_map size = 1
+2024-06-21 20:00:18,250 - DEBUG - trim_cache() called. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:18,250 - DEBUG - trim_cache() returns. treeSet size is 1 and cache capacity is 5
+2024-06-21 20:00:18,261 - DEBUG - deserialize_json_dict() returns
+2024-06-21 20:00:18,261 - DEBUG - Cache Entry: (0, 1719018018156876, 0)
+2024-06-21 20:00:18,261 - DEBUG - sfqid: 01b52b3c-0001-e495-0000-00060cf2a0b1
+2024-06-21 20:00:18,261 - DEBUG - query execution done
+2024-06-21 20:00:18,261 - DEBUG - SUCCESS
+2024-06-21 20:00:18,261 - DEBUG - PUT OR GET: False
+2024-06-21 20:00:18,261 - DEBUG - Query result format: arrow
+2024-06-21 20:00:18,261 - INFO - Number of results in first chunk: 0
+2024-06-21 20:00:18,261 - INFO - Executed query: SELECT * FROM emp_full_details
+2024-06-21 20:00:18,261 - DEBUG - beginning to schedule result batch downloads
+2024-06-21 20:00:18,282 - INFO - Report generated: emp_full_details.txt
+2024-06-21 20:00:18,282 - INFO - Data processing completed successfully.
+2024-06-21 20:00:18,282 - INFO - closed
+2024-06-21 20:00:18,282 - DEBUG - Closing telemetry client.
+2024-06-21 20:00:18,282 - DEBUG - Sending 1 logs to telemetry. Data is {'logs': [{'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_imported_packages', 'value': "{'ipaddress', 'weakref', 'shutil', 'certifi', 'pickle', 'opcode', 'codecs', 'bz2', 'posixpath', 'linecache', 'inspect', 'contextlib', 'struct', 'gc', 'csv', 'msvcrt', 'hashlib', 'concurrent', 'ssl', 'os', 'keyword', 'copyreg', 'select', 'base64', 'typing', 'requests', 'ctypes', 'packaging', 'itertools', 'tomlkit', 'genericpath', 'subprocess', 'secrets', 'builtins', 'urllib', 'zipimport', 'charset_normalizer', 'io', 'binascii', 'stringprep', 'platform', 'socket', 'numpy', 'cmath', 'types', 'selectors', 'decimal', 'encodings', 'cython_runtime', 'site', 'idna', 'time', 'fnmatch', 'bisect', 'jwt', 'http', 'collections', 'functools', 'tokenize', 'stat', 'mmap', 'random', 'json', 'urllib3', 'fractions', 'traceback', 'pytz', 'lzma', 'pathlib', 'atexit', 'OpenSSL', 'cryptography', 'email', 'html', 'threading', 'filelock', 'reprlib', 'token', 'signal', 'locale', 'pandas', 'ntpath', 'quopri', 'abc', 'string', 'logging', 'difflib', 'hmac', 'numbers', 'unicodedata', 'enum', 'marshal', 'zlib', 'mimetypes', 'operator', 'sysconfig', 'warnings', 'importlib', 'zipfile', 're', 'textwrap', 'sortedcontainers', 'dateutil', 'dataclasses', 'math', 'queue', 'winreg', 'datetime', 'sys', 'nturl2path', 'contextvars', 'tempfile', 'copy', 'nt', 'shlex', 'webbrowser', 'snowflake', 'pprint', 'uuid', 'asn1crypto', 'dis', 'ast', 'gzip', 'six', 'zoneinfo', 'typing_extensions', 'errno', 'tarfile', 'platformdirs', 'heapq', 'calendar'}"}, 'timestamp': '1719018008080'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_first_result', 'query_id': '01b52b3c-0001-e6c6-0000-00060cf280bd', 'value': 86}, 'timestamp': '1719018008174'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_first_result', 'query_id': '01b52b3c-0001-e496-0000-00060cf24099', 'value': 202}, 'timestamp': '1719018008489'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_first_result', 'query_id': '01b52b3c-0001-e49a-0000-00060cf270d5', 'value': 101}, 'timestamp': '1719018010594'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_first_result', 'query_id': '01b52b3c-0001-e497-0000-00060cf2b0c9', 'value': 250}, 'timestamp': '1719018011254'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_last_result', 'query_id': '01b52b3c-0001-e497-0000-00060cf2b0c9', 'value': 0}, 'timestamp': '1719018011254'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_first_result', 'query_id': '01b52b3c-0001-e495-0000-00060cf2a0a9', 'value': 132}, 'timestamp': '1719018012935'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_first_result', 'query_id': '01b52b3c-0001-e495-0000-00060cf2a0ad', 'value': 101}, 'timestamp': '1719018013085'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_last_result', 'query_id': '01b52b3c-0001-e495-0000-00060cf2a0ad', 'value': 0}, 'timestamp': '1719018013085'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_first_result', 'query_id': '01b52b3c-0001-e6c6-0000-00060cf280c1', 'value': 96}, 'timestamp': '1719018014180'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_first_result', 'query_id': '01b52b3c-0001-e49a-0000-00060cf270d9', 'value': 100}, 'timestamp': '1719018014321'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_last_result', 'query_id': '01b52b3c-0001-e49a-0000-00060cf270d9', 'value': 0}, 'timestamp': '1719018014321'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_first_result', 'query_id': '01b52b3c-0001-e498-0000-00060cf260c1', 'value': 92}, 'timestamp': '1719018015862'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_first_result', 'query_id': '01b52b3c-0001-e49a-0000-00060cf270dd', 'value': 179}, 'timestamp': '1719018016161'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_last_result', 'query_id': '01b52b3c-0001-e49a-0000-00060cf270dd', 'value': 15}, 'timestamp': '1719018016176'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'Stacktrace': (False, '  File "snowflake\\connector\\cursor.py", line 1080, in execute\n  File "snowflake\\connector\\errors.py", line 290, in errorhandler_wrapper\n  File "snowflake\\connector\\errors.py", line 345, in hand_to_other_handler\n  File "snowflake\\connector\\errors.py", line 221, in default_errorhandler\n', None), 'query_id': '01b52b3c-0001-e496-0000-00060cf2409d', 'sql_state': '42S02', 'reason': '002003 (42S02)', 'ErrorNumber': '2003', 'type': 'client_sql_exception', 'exception': 'ProgrammingError'}, 'timestamp': '1719018018125'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_first_result', 'query_id': '01b52b3c-0001-e495-0000-00060cf2a0b1', 'value': 96}, 'timestamp': '1719018018261'}, {'message': {'driver_type': 'PythonConnector', 'driver_version': '3.10.1', 'source': 'PythonConnector', 'type': 'client_time_consume_last_result', 'query_id': '01b52b3c-0001-e495-0000-00060cf2a0b1', 'value': 0}, 'timestamp': '1719018018261'}]}.
+2024-06-21 20:00:18,282 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:18,282 - DEBUG - remaining request timeout: 5000 ms, retry cnt: 1
+2024-06-21 20:00:18,282 - DEBUG - Request guid: 92c49f06-120c-4926-8684-c1bda3070387
+2024-06-21 20:00:18,282 - DEBUG - socket timeout: 60
+2024-06-21 20:00:18,329 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /telemetry/send?request_guid=92c49f06-120c-4926-8684-c1bda3070387 HTTP/1.1" 200 86
+2024-06-21 20:00:18,329 - DEBUG - SUCCESS
+2024-06-21 20:00:18,329 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:18,329 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:18,329 - DEBUG - Successfully uploading metrics to telemetry.
+2024-06-21 20:00:18,329 - INFO - No async queries seem to be running, deleting session
+2024-06-21 20:00:18,345 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 1/1 active sessions
+2024-06-21 20:00:18,345 - DEBUG - remaining request timeout: 5000 ms, retry cnt: 1
+2024-06-21 20:00:18,345 - DEBUG - Request guid: 3bb4348d-780e-49b2-9189-1cf764743766
+2024-06-21 20:00:18,345 - DEBUG - socket timeout: 60
+2024-06-21 20:00:18,408 - DEBUG - https://mcvpuud-yr28894.snowflakecomputing.com:443 "POST /session?delete=true&request_guid=3bb4348d-780e-49b2-9189-1cf764743766 HTTP/1.1" 200 76
+2024-06-21 20:00:18,408 - DEBUG - SUCCESS
+2024-06-21 20:00:18,408 - DEBUG - Session status for SessionPool 'mcvpuud-yr28894.snowflakecomputing.com', SessionPool 0/1 active sessions
+2024-06-21 20:00:18,408 - DEBUG - ret[code] = None, after post request
+2024-06-21 20:00:18,424 - DEBUG - clear_cache() called
+2024-06-21 20:00:18,424 - DEBUG - Session is closed
+2024-06-21 20:00:18,424 - DEBUG - Script finished
